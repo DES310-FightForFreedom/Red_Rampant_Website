@@ -1,0 +1,681 @@
+@font-face {
+  font-family: "dumbledor1";
+  src: url(./fonts/dumbledor/dum1/dum1.ttf) format("truetype");
+}
+@font-face {
+  font-family: "dumbledor2";
+  src: url(./fonts/dumbledor/dum2/dum2.ttf) format("truetype");
+}
+@font-face {
+  font-family: "dumbledor3";
+  src: url(./fonts/dumbledor/dum3/dum3.ttf) format("truetype");
+}
+@font-face {
+  font-family: "notebookGreater";
+  src: url(./fonts/RRNotebookGreater.otf);
+}
+@font-face {
+  font-family: "notebookLesser";
+  src: url(./fonts/RRNotebookLesser.otf);
+}
+@font-face {
+  font-family: "celticmd";
+  src: url(./fonts/celticmd.ttf);
+}
+
+/* site-wide elements */
+
+* {
+  padding: 0%;
+  cursor: url(./images/Page_elements/cursor.cur), auto;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  z-index: -1;
+}
+
+.navigation {
+  margin-bottom: 15px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+li {
+  display: flex;
+  margin: 3px;
+  justify-content: center;
+  padding: 2px;
+}
+
+.page_button {
+  display: flex;
+  background-image: url(./images/Page_elements/buttonBackground.png);
+  margin: 3px;
+  border: 1px solid goldenrod;
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+  justify-content: center;
+  padding: 2px;
+  width: 115px;
+  height: 45%;
+}
+.page_button:hover {
+  border: 2px solid rgb(209, 131, 13);
+  margin: 2px;
+  text-shadow: 0 0 3px #ff0000;
+}
+@media (max-width: 576px) {
+  .page_button {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .currentPage {
+    border: 2px solid rgb(209, 131, 13);
+    margin: 2px;
+    text-shadow: 0 0 3px #ff0000;    
+  }
+}
+
+a {
+  font-family: "dumbledor1";
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: rgb(13, 13, 68);
+  text-align: center;
+}
+@media (max-width: 576px) {
+  a {
+    font-size: 1rem;
+  }
+}
+
+header {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+
+@media (max-width: 480px) {
+  .indicator {
+    display: none;
+  }
+}
+
+.parchment {
+  position: relative;
+  width: 95%;
+  height: 20%;
+  z-index: -1;
+}
+
+h1 {
+  display: inline;
+  font-family: dumbledor1;
+  font-size: 5vw;
+  position: absolute;
+  text-align: center;
+  margin-top: 3%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 7vw;
+  }
+}
+
+h2 {
+  font-family: dumbledor1;
+}
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+span {
+  font-family: celticmd;
+}
+
+/* 'The Game' page specific elements */
+
+.gameBody {
+  background-image: url(./images/Background_images/TheGame_Background.gif);
+}
+@media (max-width: 576px) {
+  .gameBody {
+    background-image: url(./images/Background_images/RedRampant_Logo_Vertical_Field.png);
+  }
+}
+
+.gametitle {
+  position: absolute;
+  width: 42%;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .gametitle {
+    width: 60%;
+  }
+}
+
+#gameHeader {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+@media (max-width: 1024px) {
+  #gameHeader {
+    width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  #gameHeader {
+    width: 100%;
+  }  
+}
+
+.companyLogo {
+  display: inline;
+  width: 13%;
+}
+
+@media (max-width: 480px) {
+  .companyLogo {
+    display: none;
+  }  
+}
+
+#companyLogo {
+  display: inline;
+  width: 100%;
+}
+
+.gameLogo {
+  display: inline;
+  width: 9%;
+}
+
+@media (max-width: 480px) {
+  .gameLogo {
+    display: none;
+  }  
+}
+
+#gameLogo {
+  display: inline;
+  width: 100%;
+}
+
+.videoplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer {
+  height: 400px;
+  width: 600px;
+}
+@media (max-width: 768px) {
+  .trailer {
+    height: 35%;
+    width: 75%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 5px 5px 15px rgb(37, 16, 16);
+  }
+}
+@media (max-width: 576px) {
+  .trailer {
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 5px 5px 15px rgb(37, 16, 16);
+
+  }
+}
+
+.steam_widget {
+  display: grid;
+  margin-top: 2%;
+  margin-bottom: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+}
+@media (max-width: 1200px) {
+  .steam_widget {
+    width: 75%;
+  }
+}
+@media (max-width: 992px) {
+  .steam_widget {
+    width: 90%;
+    margin-bottom: 60%;
+  }
+}
+@media (max-width: 576px) {
+  .steam_widget {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .steam_widget {
+    width: 90%;
+    margin-bottom: 60%;
+  }
+}
+
+.social_link {
+  width: 39px;
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+  border-radius: 25%;
+}
+.social_link:hover {
+  box-shadow: 1px 1px 15px #ff0000;
+  border-radius: 25%;
+}
+.social_link_steam {
+  width: 39px;
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+  border-radius: 50%;
+}
+.social_link_steam:hover {
+  box-shadow: 1px 1px 15px #ff0000;
+  border-radius: 50%;
+}
+.social_link_small {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6px;
+}
+@media (max-width: 768px) {
+  .social_link_small {
+    display: flex;
+  }
+  .small_social_link {
+    width: 39px;
+    box-shadow: 5px 5px 15px rgb(37, 16, 16);
+    border-radius: 25%;
+  }
+}
+@media (max-width: 576px) {
+  .small_social_link {
+    width: 30px;
+    box-shadow: 5px 5px 15px rgb(37, 16, 16);
+    border-radius: 25%;
+  }
+}
+
+.social_link_large {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .social_link_large {
+    display: none;
+  }
+}
+
+footer ul li a {
+  display: flex;
+  margin: 3px;
+  padding: 2px;
+}
+
+footer ul li {
+  background-image: none;
+  border: none;
+  width: auto;
+}
+
+/* 'The Journey' page specific elements */
+
+.journeyBody {
+  background-image: url(./images/Background_images/TheJourney_Background.png);
+}
+
+.blog_post {
+  width: 100%;
+  height: 650px;
+  margin-bottom: 4%;
+}
+
+.youtubeVideo {
+  width: 992px;
+  height: 558px;
+}
+@media (max-width: 1200px) {
+  .youtubeVideo {
+    width: 768px;
+    height: 432px;
+  }
+}
+@media (max-width: 768px) {
+  .youtubeVideo {
+    width: 576px;
+    height: 324px;
+  }
+}
+@media (max-width: 576px) {
+  .youtubeVideo {
+    width: 448px;
+    height: 252px;
+  }
+}
+
+/* 'The Press' page specific elements */
+
+.pressBody {
+  background-image: url(./images/Background_images/ThePress_Background.png);
+}
+
+.container {
+  display: flex;
+}
+
+#carousel {
+  display: contents;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.theNationalLink {
+  background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023.png);
+  background-position: top;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+@media (max-width: 1400px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_1400px.png) !important;
+  }
+}
+@media (max-width: 1200px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_992px.png) !important;
+  }
+}
+@media (max-width: 992px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_768px.png) !important;
+  }
+}
+@media (max-width: 768px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_576px.png) !important;
+  }
+}
+@media (max-width: 576px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_480px.png) !important;
+  }
+}
+@media (max-width: 480px) {
+  .theNationalLink {
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_480px.png) !important;
+  }
+}
+
+.linkedinPostLink {
+  background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post.png);
+  background-position: top;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+@media (max-width: 1400px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_1400px.png) !important;
+  }
+}
+@media (max-width: 1200px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_992px.png) !important;
+  }
+}
+@media (max-width: 992px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_768px.png) !important;
+  }
+}
+@media (max-width: 768px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_576px.png) !important;
+  }
+}
+@media (max-width: 576px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_480px.png) !important;
+  }
+}
+@media (max-width: 480px) {
+  .linkedinPostLink {
+    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_480px.png) !important;
+  }
+}
+
+.steamLink {
+  background-image: url(./images/Press_Clippings/Steam_screenshot.png);
+  background-position: top;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+@media (max-width: 1400px) {
+  .steamLink {
+    background-image: url(./images/Press_Clippings/Steam_screenshot_1400px.png) !important;
+  }
+}
+@media (max-width: 992px) {
+  .steamLink {
+    background-image: url(./images/Press_Clippings/Steam_screenshot_768px.png) !important;
+  }
+}
+@media (max-width: 768px) {
+  .steamLink {
+    background-image: url(./images/Press_Clippings/Steam_screenshot_576px.png) !important;
+  }
+}
+@media (max-width: 576px) {
+  .steamLink {
+    background-image: url(./images/Press_Clippings/Steam_screenshot_480px.png) !important;
+  }
+}
+@media (max-width: 480px) {
+  .steamLink {
+    background-image: url(./images/Press_Clippings/Steam_screenshot_480px.png) !important;
+  }
+}
+
+.abertayLink {
+  background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024.png);
+  background-position: top;
+  background-size: auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+@media (max-width: 1400px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_1400px.png) !important;
+  }
+}
+@media (max-width: 1200px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_992px.png) !important;
+  }
+}
+@media (max-width: 992px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_768px.png) !important;
+  }
+}
+@media (max-width: 768px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_576px.png) !important;
+  }
+}
+@media (max-width: 576px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_480px.png) !important;
+  }
+}
+@media (max-width: 480px) {
+  .abertayLink {
+    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_480px.png) !important;
+  }
+}
+
+.left_arrow,
+.right_arrow {
+  margin: auto;
+  background-color: rgba(240, 248, 255, 0);
+  border-color: #ff000000;
+}
+@media (max-width: 992px) {
+  .left_arrow,
+  .right_arrow {
+    display: none;
+  }
+}
+
+.left_arrow_mobile,
+.right_arrow_mobile {
+  display: none;
+}
+@media (max-width: 992px) {
+  .left_arrow_mobile,
+  .right_arrow_mobile {
+    display: flex;
+  }
+}
+
+.carousel-indicators {
+  position: fixed;
+}
+
+.pressClipping {
+  display: inline-block;
+  border: 2px solid black;
+  width: 100%;
+  height: 650px;
+}
+
+/* 'The Team' page specific elements */
+
+.teamBody {
+  background-image: url(./images/Background_images/TheTeam_Background.jpg);
+}
+
+.team {
+  display: flex;
+  justify-content: center;  
+  box-shadow: bisque;
+  align-items: center;
+}
+
+.developer {
+  display: grid;
+  background-color: bisque;
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+  justify-items: center;
+  align-content: center;
+  width: 250px;
+  margin: 10px;
+  border-radius: 15px;
+}
+@media (max-width: 576px) {
+  .developer {
+    width: 200px;
+  }
+}
+
+h4 {
+  font-family: dumbledor1;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.developer img {
+  border: 5px double goldenrod;
+}
+@media (max-width: 576px) {
+  .developer img {
+    width: 175px;
+  }
+}
+
+.card-text {
+  display: flex;
+  color: rgb(13, 13, 68);
+  font-size: 1.3rem;
+  font-family: dumbledor1;
+  text-align: center;
+  padding-left: 3px;
+  padding-right: 3px;
+  line-height: 1.2rem;
+}
+@media (max-width: 576px) {
+  .card-text {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    padding-bottom: 10px;
+  }
+}
+
+.strike_link:hover {
+  box-shadow: 5px 5px 15px rgb(37, 16, 16);
+}
+
+/* Wiki page */
+
+.wikiBody {
+  background-color: black;
+  /* background-image: url(./images/Background_images/Lab1.png); */
+  z-index: -1;
+}
+
+.spiderweb {
+  display: flex;
+  background-image: url(./images/Spiderwebs/spider-web-transparent\(9\)-623x400_4dc709c8.png);
+  background-size: cover;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 650px;
+  z-index: -1;
+  
+}
