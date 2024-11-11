@@ -12,6 +12,9 @@
 </head>
 
 <body class="pressBody">
+
+<!-- Header with the page title and the logos on either side  -->
+
     <header>
         <div class="companyLogo">
             <img id="companyLogo" src="./images/Page_elements/Company_Logo_Transparent.png" alt="">
@@ -24,6 +27,8 @@
             <img id="gameLogo" src="./images/Page_elements/RedRampant_Circle.png" alt="">
         </div>
     </header>
+
+<!-- The social media links for smaller screens, needed because they change from 2 on either side of the page buttons to a row underneath them.  -->
 
     <div class="social_link_small">
         <li>
@@ -47,6 +52,8 @@
             </a>
         </li>
     </div>
+
+    <!-- The main navigation block with the social media links at either side of the buttons -->
 
     <ul class="navigation">
         <li class="social_link_large">
@@ -81,7 +88,7 @@
         <div class="container">
             <div id="carousel" class="carousel slide">
 
-                <!-- control button -->
+                <!-- left control button -->
                 <button class="left_arrow" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <div class="arrows">
                         <img src="./images/Page_elements/BackArrow.png" alt="">
@@ -95,44 +102,51 @@
 
                 <!-- slides -->
                 <div class="carousel-inner">
+                    <!-- Slide 1 -->
                     <div class="carousel-item active">
                         <a href="https://www.thenational.scot/politics/23897958.new-video-game-puts-players-heart-scottish-wars-independence/"
                             target="_blank" rel="noopener noreferrer">
                             <img class="pressClipping img-fluid theNationalLink"></img>
                         </a>
                     </div>
+                    <!-- Slide 2 -->
                     <div class="carousel-item">
                         <iframe class="pressClipping"
                             src="https://news.stv.tv/north/red-rampant-rewrite-history-in-a-video-game-set-in-the-scottish-wars-of-independence">
                         </iframe>
                     </div>
+                    <!-- Slide 3 -->
                     <div class="carousel-item">
                         <iframe class="pressClipping"
                             src="https://scottishgames.net/2024/07/29/out-now-red-rampant-new-from-eclectic-synthesis/">
                         </iframe>
                     </div>
+                    <!-- Slide 4 -->
                     <div class="carousel-item">
                         <a href="https://www.linkedin.com/posts/baglow_out-now-red-rampant-new-from-eclectic-activity-7223654409107316736-UGa3/" target="_blank"
                             rel="noopener noreferrer">
                             <img class="pressClipping img-fluid linkedinPostLink"></img>
                         </a>
                     </div>
+                    <!-- Slide 5 -->
                     <div class="carousel-item">
                         <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank"
                             rel="noopener noreferrer">
                             <img class="pressClipping img-fluid steamLink"></img>
                         </a>
                     </div>
+                    <!-- Slide 6 -->
                     <div class="carousel-item">
                         <a href="https://www.abertay.ac.uk/news/2024/abertay-students-play-pivotal-role-in-developing-a-new-game-for-the-steam-platform/"
                             target="_blank" rel="noopener noreferrer">
                             <img class="pressClipping img-fluid abertayLink"></img>
                         </a>
                     </div>
+                    <!-- Add a new slide here. First try an 'iframe' by copying slide 3 and replacing the link with the new link to the article and pray that they permit iframes to be used on their site, otherwise, you'll have to copy frame 6 and, using developer mode in your browser, take screenshots of the page in all the different sizes (press 'control-f' to search for 'resizing' in the css file to see all the different sizes and what to do next)  -->
                 </div>
 
 
-                <!-- control button -->
+                <!-- right control button -->
                 <button class="right_arrow" type="button" data-bs-target="#carousel" data-bs-slide="next">
                     <div class="arrows">
                         <img src="./images/Page_elements/NextArrow.png" alt="">
@@ -153,8 +167,8 @@
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-
-
+                    <!-- Add a new indicator above when you add another slide. Change the numbers so they follow on from the last one. -->
+                    
                 </div>
             </div>
         </div>

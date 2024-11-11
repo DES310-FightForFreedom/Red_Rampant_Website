@@ -12,6 +12,9 @@
 </head>
 
 <body class="journeyBody">
+
+    <!-- Header with the page title and the logos on either side  -->
+
     <header>
         <div class="companyLogo">
             <img id="companyLogo" src="./images/Page_elements/Company_Logo_Transparent.png" alt="">
@@ -24,6 +27,8 @@
             <img id="gameLogo" src="./images/Page_elements/RedRampant_Circle.png" alt="">
         </div>
     </header>
+
+<!-- The social media links for smaller screens, needed because they change from 2 on either side of the page buttons to a row underneath them.  -->
 
     <div class="social_link_small">
         <li>
@@ -48,6 +53,8 @@
         </li>
     </div>
 
+    <!-- The main navigation block with the social media links at either side of the buttons -->
+
     <ul class="navigation">
         <li class="social_link_large">
             <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank">
@@ -60,10 +67,12 @@
             </a>
         </li>
         <li class="page_button"><a href="index.html">The Game</a></li>
+
         <div class="nav-item ">
             <li class="page_button currentPage"><a href="TheJourney.html">The Journey</a></li>
             <img class="indicator" src="./images/Page_elements/SelectionArrow.png" alt="">
         </div>
+
         <li class="page_button"><a href="ThePress.html">The Press</a></li>
         <li class="page_button"><a href="TheTeam.html">The Team</a></li>
         <li class="social_link_large">
@@ -77,11 +86,15 @@
             </a>
         </li>
     </ul>
+
+    <!-- The carousel containing the YouTube videos. -->
+
     <div>
         <div class="container">
             <div id="carousel" class="carousel slide">
 
-                <!-- control button -->
+                <!-- left control button -->
+
                 <button class="left_arrow" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <div class="arrows">
                         <img src="./images/Page_elements/BackArrow.png" alt="">
@@ -94,6 +107,7 @@
                 </button>
 
                 <!-- slides -->
+                 <!-- Slide 1 -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="blog_post">
@@ -106,7 +120,7 @@
                             </p>
                         </div>
                     </div>
-
+                    <!-- Slide 2 -->
                     <div class="carousel-item">
                         <div class="blog_post">
                             <p class="videoplayer">
@@ -118,10 +132,11 @@
                             </p>
                         </div>
                     </div>
-
+                    <!-- Slide 3 -->
                     <div class="carousel-item  ">
                         <div class="blog_post">
                             <p class="videoplayer">
+                                <!-- replace the link below with the link to the new video -->
                                 <iframe class="youtubeVideo"
                                     src="https://www.youtube.com/embed/AjQ_h5L2wHs?si=tez3JbBzhcTslOTT&amp;controls=0"
                                     title="YouTube video player" frameborder="0"
@@ -132,7 +147,9 @@
                     </div>
                 </div>
 
-                <!-- control button -->
+                <!-- Slide 4 (copy and paste a block from above to add a new slide and change the link) -->
+
+                <!-- right control button -->
                 <button class="right_arrow" type="button" data-bs-target="#carousel" data-bs-slide="next">
                     <div class="arrows">
                         <img src="./images/Page_elements/NextArrow.png" alt="">
@@ -144,14 +161,13 @@
                     <img src="./images/Page_elements/NextArrow.png" alt="">
                 </button>
 
-
-
                 <!-- indicators -->
+
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <!-- Add a new indicator above when you add another slide. Change the numbers so they follow on from the last one. -->
                 </div>
 
             </div>

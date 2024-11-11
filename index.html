@@ -12,6 +12,9 @@
 </head>
 
 <body class="gameBody ">
+
+<!-- Header with the page title and the logos on either side  -->
+
     <header>
         <div class="companyLogo">
             <img id="companyLogo" src="./images/Page_elements/Company_Logo_Transparent.png" alt="">
@@ -24,6 +27,9 @@
             <img id="gameLogo" src="./images/Page_elements/RedRampant_Circle.png" alt="">
         </div>
     </header>
+
+<!-- The social media links for smaller screens (ipads and suchlike), needed because they change from 2 on either side of the page buttons to a row underneath them. I added the 'social_media_small_home' so I could hide this in order to have the social links at the bottom of the page, on mobile phones, on the home screen only, whereas these are not changed on mobile for on the other pages. -->
+
     <div class="social_link_small social_link_small_home">
         <li>
             <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank">
@@ -47,6 +53,8 @@
         </li>
     </div>
 
+    <!-- The main navigation block with the social media links at either side of the buttons -->
+
     <ul>
         <li class="social_link_large">
             <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank">
@@ -58,10 +66,12 @@
                 <img class="social_link" src="./images/Page_elements/youtube-logo.png" alt="">
             </a>
         </li>
+        <!-- This is a seperate div to add the indicator underneath the page button, I do this for each page. This was my way around getting the indicator to 'move' for each page. -->
         <div class="nav-item ">
             <li class="page_button list-group-item currentPage"><a href="index.html">The Game</a></li>
-            <img class="indicator" src="./images/Page_elements/SelectionArrow.png" alt="">
+            <img class="indicator" src="./images/Page_elements/SelectionArrow.png" alt="">  
         </div>
+        
         <li class="page_button list-group-item"><a href="TheJourney.html">The Journey</a></li>
         <li class="page_button list-group-item"><a href="ThePress.html">The Press</a></li>
         <li class="page_button list-group-item"><a href="TheTeam.html">The Team</a></li>
@@ -76,12 +86,20 @@
             </a>
         </li>
     </ul>
+
+    <!-- The video trailer -->
+
     <div class="videoplayer">
         <video class="trailer" controls src="./video/Red Rampant Trailer.mp4"
             poster="./images/Page_elements/video_placeholder.png"></video>
     </div>
+
+    <!-- The 'buy now' Steam link -->
+
     <iframe class="steam_widget" src="https://store.steampowered.com/widget/2843520/" frameborder="0" width="646"
         height="190"></iframe>
+
+    <!-- The social links for the mobile screen at the bottom of the page. -->
 
         <div class="social_link_mobile">
             <li>

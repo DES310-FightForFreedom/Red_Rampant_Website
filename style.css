@@ -403,7 +403,7 @@ footer ul li {
   }
 }
 
-/* 'The Press' page specific elements */
+/* 'The Press' page specific elements (see below for resizing instructions). */
 
 .pressBody {
   background-image: url(./images/Background_images/ThePress_Background.png);
@@ -421,8 +421,10 @@ footer ul li {
   text-align: center;
 }
 
+/*  When taking screenshots of a new article, first copy/paste an existing carousel item and rename it to something suitable as you can see I have done. Use developer mode in the browser and change the size of the screen by inputting the pixel height and width (below) and using a screenshot/clipping tool take shots of each screen size. Save them in the images/Press_Clippings folder and name them appropriately as I have. Don't forget to add another indicator to the bottom of the page or it won't show up. */
+
 .theNationalLink {
-  background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023.png);
+  background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023.png); /* 1920 x 1080 pixels */
   background-position: top;
   background-size: auto;
   -webkit-background-size: cover;
@@ -431,34 +433,30 @@ footer ul li {
 }
 @media (max-width: 1400px) {
   .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_1400px.png) !important;
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_1400px.png) !important; /* 1400 x 926 pixels */
   }
 }
 @media (max-width: 1200px) {
   .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_992px.png) !important;
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_992px.png) !important; /* 992 x 926 pixels */
   }
 }
 @media (max-width: 992px) {
   .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_768px.png) !important;
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_768px.png) !important; /* 768 x 926 pixels */
   }
 }
 @media (max-width: 768px) {
   .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_576px.png) !important;
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_576px.png) !important; /* 576 x 926 pixels */
   }
 }
 @media (max-width: 576px) {
   .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_480px.png) !important;
+    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_480px.png) !important; /* 480 x 926 pixels */
   }
 }
-@media (max-width: 480px) {
-  .theNationalLink {
-    background-image: url(./images/Press_Clippings/The_National_press_clipping_11-2023_480px.png) !important;
-  }
-}
+
 
 .linkedinPostLink {
   background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post.png);
@@ -493,11 +491,7 @@ footer ul li {
     background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_480px.png) !important;
   }
 }
-@media (max-width: 480px) {
-  .linkedinPostLink {
-    background-image: url(./images/Press_Clippings/Brian_Baglow_linkedIn_post_480px.png) !important;
-  }
-}
+
 
 .steamLink {
   background-image: url(./images/Press_Clippings/Steam_screenshot.png);
@@ -527,11 +521,7 @@ footer ul li {
     background-image: url(./images/Press_Clippings/Steam_screenshot_480px.png) !important;
   }
 }
-@media (max-width: 480px) {
-  .steamLink {
-    background-image: url(./images/Press_Clippings/Steam_screenshot_480px.png) !important;
-  }
-}
+
 
 .abertayLink {
   background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024.png);
@@ -566,11 +556,7 @@ footer ul li {
     background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_480px.png) !important;
   }
 }
-@media (max-width: 480px) {
-  .abertayLink {
-    background-image: url(./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024_480px.png) !important;
-  }
-}
+
 
 .left_arrow,
 .right_arrow {
@@ -677,23 +663,3 @@ h4 {
   box-shadow: 5px 5px 15px rgb(37, 16, 16);
 }
 
-/* Wiki page */
-
-.wikiBody {
-  background-color: black;
-  /* background-image: url(./images/Background_images/Lab1.png); */
-  z-index: -1;
-}
-
-.spiderweb {
-  display: flex;
-  background-image: url(./images/Spiderwebs/spider-web-transparent\(9\)-623x400_4dc709c8.png);
-  background-size: cover;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 650px;
-  height: 650px;
-  z-index: -1;
-  
-}
