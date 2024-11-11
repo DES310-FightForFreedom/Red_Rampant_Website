@@ -328,6 +328,24 @@ span {
     border-radius: 25%;
   }
 }
+.social_link_mobile {
+  display: none;
+  justify-content: center;
+  align-items: start;
+  margin-bottom: 60%;
+}
+
+@media (max-width: 480px) {
+  .social_link_mobile {
+    display: flex;
+  }
+  .social_link_small_home {
+    display: none;
+  }
+  .steam_widget {
+    margin-bottom: 5%;
+  }
+}
 
 .social_link_large {
   display: flex;
