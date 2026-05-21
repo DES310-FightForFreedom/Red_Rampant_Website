@@ -231,6 +231,9 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .trailer {
@@ -253,6 +256,20 @@ span {
     margin-bottom: 5%;
     box-shadow: 5px 5px 15px rgb(37, 16, 16);
 
+  }
+}
+
+.youtubeVideo {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .youtubeVideo {
+    max-width: 90vw;
+    height: 50vw;
   }
 }
 
@@ -415,6 +432,12 @@ footer ul li {
 
 #carousel {
   display: contents;
+}
+
+#trailerCarousel {
+  margin: 20px auto;
+  max-width: 900px;
+  width: 100%;
 }
 
 .carousel-item {
