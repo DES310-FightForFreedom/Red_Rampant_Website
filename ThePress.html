@@ -15,6 +15,7 @@
     <meta name="twitter:title" content="Red Rampant - Press & Media Coverage">
     <meta name="twitter:description" content="Red Rampant has been featured in major publications and media outlets.">
     <meta name="twitter:image" content="./images/Page_elements/RedRampant_Circle.png">
+    <link rel="sitemap" href="./sitemap.xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
@@ -101,71 +102,83 @@
                 <!-- left control button -->
                 <button class="left_arrow" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <div class="arrows">
-                        <img src="./images/Page_elements/BackArrow.png" alt="Previous slide arrow">
+                        <img src="./images/Page_elements/BackArrow.png" alt="Previous slide arrow" loading="lazy">
                     </div>
                 </button>
 
                 <button class="carousel-control-prev m left_arrow_mobile" type="button" data-bs-target="#carousel"
                     data-bs-slide="prev">
-                    <img src="./images/Page_elements/BackArrow.png" alt="Previous slide arrow">
+                    <img src="./images/Page_elements/BackArrow.png" alt="Previous slide arrow" loading="lazy">
                 </button>
 
                 <!-- slides -->
                 <div class="carousel-inner">
-                    <!-- Slide 1 -->
+                    <!-- Slide 1 - YouTube Video -->
                     <div class="carousel-item active">
-                        <a href="https://www.thenational.scot/politics/23897958.new-video-game-puts-players-heart-scottish-wars-independence/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img class="pressClipping img-fluid theNationalLink" alt="The National article about Red Rampant"></img>
-                        </a>
+                        <div class="blog_post">
+                            <p class="videoplayer">
+                                <iframe class="youtubeVideo"
+                                    src="https://www.youtube.com/embed/b2ANxFdlnd4"
+                                    title="Red Rampant YouTube video" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </p>
+                        </div>
                     </div>
                     <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <a href="https://www.thenational.scot/politics/23897958.new-video-game-puts-players-heart-scottish-wars-independence/"
+                            target="_blank" rel="noopener noreferrer">
+                            <img class="pressClipping img-fluid theNationalLink" src="./images/Press_Clippings/The_National_press_clipping_11-2023.png" alt="The National article about Red Rampant" loading="lazy"></img>
+                        </a>
+                    </div>
+                    <!-- Slide 3 -->
                     <div class="carousel-item">
                         <iframe class="pressClipping"
                             src="https://news.stv.tv/north/red-rampant-rewrite-history-in-a-video-game-set-in-the-scottish-wars-of-independence">
                         </iframe>
                     </div>
-                    <!-- Slide 3 -->
+                    <!-- Slide 4 -->
                     <div class="carousel-item">
                         <iframe class="pressClipping"
                             src="https://scottishgames.net/2024/07/29/out-now-red-rampant-new-from-eclectic-synthesis/">
                         </iframe>
                     </div>
-                    <!-- Slide 4 -->
+                    <!-- Slide 5 -->
                     <div class="carousel-item">
                         <a href="https://www.linkedin.com/posts/baglow_out-now-red-rampant-new-from-eclectic-activity-7223654409107316736-UGa3/" target="_blank"
                             rel="noopener noreferrer">
-                            <img class="pressClipping img-fluid linkedinPostLink" src="./images/Press_Clippings/Brian_Baglow_linkedIn_post.png" alt="LinkedIn post about Red Rampant game release"></img>
-                        </a>
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-item">
-                        <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank"
-                            rel="noopener noreferrer">
-                            <img class="pressClipping img-fluid steamLink" src="./images/Press_Clippings/Steam_screenshot.png" alt="Steam store page for Red Rampant"></img>
+                            <img class="pressClipping img-fluid linkedinPostLink" src="./images/Press_Clippings/Brian_Baglow_linkedIn_post.png" alt="LinkedIn post about Red Rampant game release" loading="lazy"></img>
                         </a>
                     </div>
                     <!-- Slide 6 -->
                     <div class="carousel-item">
-                        <a href="https://www.abertay.ac.uk/news/2024/abertay-students-play-pivotal-role-in-developing-a-new-game-for-the-steam-platform/"
-                            target="_blank" rel="noopener noreferrer">
-                            <img class="pressClipping img-fluid abertayLink" src="./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024.png" alt="Abertay University article about Red Rampant development"></img>
+                        <a href="https://store.steampowered.com/app/2843520/Red_Rampant/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img class="pressClipping img-fluid steamLink" src="./images/Press_Clippings/Steam_screenshot.png" alt="Steam store page for Red Rampant" loading="lazy"></img>
                         </a>
                     </div>
-                    <!-- Add a new slide here. First try an 'iframe' by copying slide 3 and replacing the link with the new link to the article and pray that they permit iframes to be used on their site, otherwise, you'll have to copy frame 6 and, using developer mode in your browser, take screenshots of the page in all the different sizes (press 'control-f' to search for 'resizing' in the css file to see all the different sizes and what to do next)  -->
+                    <!-- Slide 7 -->
+                    <div class="carousel-item">
+                        <a href="https://www.abertay.ac.uk/news/2024/abertay-students-play-pivotal-role-in-developing-a-new-game-for-the-steam-platform/"
+                            target="_blank" rel="noopener noreferrer">
+                            <img class="pressClipping img-fluid abertayLink" src="./images/Press_Clippings/Abertay_Uni_press_clipping_10-2024.png" alt="Abertay University article about Red Rampant development" loading="lazy"></img>
+                        </a>
+                    </div>
+                    <!-- Add a new slide here. First try an 'iframe' by copying slide 4 and replacing the link with the new link to the article and pray that they permit iframes to be used on their site, otherwise, you'll have to copy frame 7 and, using developer mode in your browser, take screenshots of the page in all the different sizes (press 'control-f' to search for 'resizing' in the css file to see all the different sizes and what to do next)  -->
                 </div>
 
 
                 <!-- right control button -->
                 <button class="right_arrow" type="button" data-bs-target="#carousel" data-bs-slide="next">
                     <div class="arrows">
-                        <img src="./images/Page_elements/NextArrow.png" alt="Next slide arrow">
+                        <img src="./images/Page_elements/NextArrow.png" alt="Next slide arrow" loading="lazy">
                     </div>
                 </button>
 
                 <button class="carousel-control-next right_arrow_mobile" type="button" data-bs-target="#carousel"
                     data-bs-slide="next">
-                    <img src="./images/Page_elements/NextArrow.png" alt="Next slide arrow">
+                    <img src="./images/Page_elements/NextArrow.png" alt="Next slide arrow" loading="lazy">
                 </button>
 
                 <!-- indicators -->
@@ -177,6 +190,7 @@
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
                     <!-- Add a new indicator above when you add another slide. Change the numbers so they follow on from the last one. -->
                     
                 </div>
