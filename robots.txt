@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /fonts/
+
+Sitemap: https://redrampant.studio/sitemap.xml
