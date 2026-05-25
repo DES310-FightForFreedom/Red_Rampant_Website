@@ -664,6 +664,35 @@ h4 {
   }
 }
 
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.youtube-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-badge:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.youtube-badge img {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
 .card-text {
   display: flex;
   color: rgb(13, 13, 68);
