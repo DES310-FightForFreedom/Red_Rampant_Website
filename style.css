@@ -669,28 +669,41 @@ h4 {
   display: inline-block;
 }
 
-.youtube-badge {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 35px;
-  height: 35px;
+.name-with-badge {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.name-with-badge h2 {
+  margin: 0;
+}
+
+.youtube-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 .youtube-badge:hover {
   background-color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
 }
 
 .youtube-badge img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border: none;
+  display: block;
 }
 
 .card-text {
