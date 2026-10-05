@@ -1,0 +1,12 @@
+{
+  "name": "Clockpocalypse",
+  "short_name": "Clockpocalypse",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#e41515",
+  "icons": [
+    { "src": "Assets/Images/icon-192.png", "sizes": "192x192" },
+    { "src": "Assets/Images/icon-512.png", "sizes": "512x512" }
+  ]
+}

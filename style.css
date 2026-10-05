@@ -728,3 +728,186 @@ h4 {
   box-shadow: 5px 5px 15px rgb(37, 16, 16);
 }
 
+/* Projects page strips */
+.projects-list {
+  display: block;
+}
+.project.strip {
+  padding: 40px 0;
+  border-top: 1px solid rgba(209,131,13,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  background: linear-gradient(180deg, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+}
+.strip-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #efe8d6;
+}
+.strip-inner h2 {
+  font-family: dumbledor1;
+  font-size: 2.2rem;
+  margin: 0 0 1rem;
+  min-width: 0;
+}
+.strip-inner p {
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.6rem;
+  max-width: 700px;
+  font-size: 1.05rem;
+}
+@media (max-width: 768px) {
+  .strip-inner h2 {
+    font-size: 1.6rem;
+    min-width: auto;
+  }
+}
+
+/* Clockpocalypse styles */
+.clock-title {
+  color: #e41515; /* red used in game */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Digital-7', monospace;
+  text-shadow: 0 0 4px rgba(228,21,21,0.6);
+}
+.mini-clock {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  object-fit: contain;
+}
+.clock-content .caption {
+  margin-bottom: 10px;
+}
+.project-content-with-artwork {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+.project-content-with-artwork p {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+.project-content-with-artwork .hook-copy {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.project-artwork {
+  display: block;
+  width: min(100%, 360px);
+  flex: 0 0 min(34%, 360px);
+  height: auto;
+  object-fit: contain;
+}
+.monetize-content {
+  align-items: center;
+}
+.monetize-description {
+  font-family: 'Bree Serif', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .project-content-with-artwork {
+    gap: 16px;
+  }
+  .monetize-content {
+    align-items: flex-start;
+  }
+}
+.play-button {
+  display: inline-block;
+  background: #e41515;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.play-button.secondary {
+  background: transparent;
+  color: #efe8d6;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.clock-embed {
+  margin: 6px auto 0 auto;
+  max-width: 1100px;
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease;
+}
+.clock-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2b2b2b;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+@media (max-width: 768px) {
+  .clock-embed { height: 420px; }
+}
+
+/* Load Clockpocalypse display font for headings */
+@font-face {
+  font-family: 'Digital-7';
+  src: url('./fonts/digital-7-font/Digital7-rg1mL.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bree Serif';
+  src: url('./fonts/Bree_Serif/BreeSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ensure Projects area is visible below header */
+.projects-list {
+  padding-top: 40px;
+}
+
+/* Reduce bottom padding specifically for the Clockpocalypse strip to remove large empty gap */
+.project#clockpocalypse {
+  padding-bottom: 10px;
+}
+.project#clockpocalypse .clock-content {
+  width: 100%;
+}
+
+/* When the embed is activated expand to visible height */
+.clock-embed.active {
+  height: 480px;
+}
+
+/* Reduce vertical spacing between consecutive project strips */
+.project.strip + .project.strip {
+  padding-top: 20px;
+}
+
+/* Keep the display title from inheriting the generic project heading width. */
+.strip-inner h2.clock-title {
+  font-family: 'Digital-7', monospace;
+  font-size: 2.6rem;
+  line-height: 1;
+  min-width: 0;
+  margin: 0 0 1rem;
+}
+@media (max-width: 768px) {
+  .strip-inner h2.clock-title {
+    font-size: 1.6rem;
+  }
+}
+
