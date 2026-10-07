@@ -438,8 +438,14 @@ footer ul li {
   display: flex;
 }
 
+.press-carousel-container {
+  display: block;
+}
+
 #carousel {
-  display: contents;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 #trailerCarousel {
@@ -591,9 +597,19 @@ footer ul li {
 
 .left_arrow,
 .right_arrow {
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  margin: 0;
   background-color: rgba(240, 248, 255, 0);
   border-color: #ff000000;
+  transform: translateY(-50%);
+}
+.left_arrow {
+  left: 0;
+}
+.right_arrow {
+  right: 0;
 }
 @media (max-width: 992px) {
   .left_arrow,
@@ -740,6 +756,38 @@ h4 {
 .projects-list {
   display: block;
 }
+.projects-intro {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 16px;
+  color: #efe8d6;
+}
+.projects-intro-logo {
+  display: block;
+  flex: 0 0 150px;
+  width: 150px;
+}
+.projects-intro-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.projects-intro-copy {
+  flex: 1 1 auto;
+}
+.projects-intro-copy p {
+  max-width: none;
+  margin: 0 0 12px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+.projects-intro-copy p:last-child {
+  margin-bottom: 0;
+}
 .project.strip {
   padding: 40px 0;
   border-top: 1px solid rgba(209,131,13,0.2);
@@ -805,6 +853,17 @@ h4 {
   min-width: 0;
   margin: 0;
 }
+.project-description {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.project-description p + p,
+.clock-content .caption p + p {
+  margin-top: 12px;
+}
+.clock-content .caption p {
+  max-width: 900px;
+}
 .project-content-with-artwork .hook-copy {
   flex: 1 1 0;
   min-width: 0;
@@ -826,13 +885,26 @@ h4 {
   line-height: 1.6;
 }
 @media (max-width: 768px) {
+  .projects-intro {
+    align-items: flex-start;
+    gap: 18px;
+    padding-top: 12px;
+  }
+  .projects-intro-logo {
+    flex-basis: 105px;
+    width: 105px;
+  }
+  .projects-intro-copy p {
+    font-size: 1rem;
+  }
   .project-content-with-artwork {
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
   }
   .project-content-with-artwork p,
-  .project-content-with-artwork .hook-copy {
+  .project-content-with-artwork .hook-copy,
+  .project-content-with-artwork .project-description {
     flex: 0 1 auto;
     width: 100%;
     max-width: 100%;
@@ -841,6 +913,15 @@ h4 {
     width: min(100%, 360px);
     max-width: 100%;
     flex: 0 1 auto;
+  }
+}
+@media (max-width: 480px) {
+  .projects-intro {
+    gap: 12px;
+  }
+  .projects-intro-logo {
+    flex-basis: 76px;
+    width: 76px;
   }
 }
 .play-button {
