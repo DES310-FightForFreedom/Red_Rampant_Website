@@ -52,6 +52,8 @@ export class sound_effects {
             Iran: new Audio('./AirRaid_Sounds/Iran_Siren.wav?' + new Date().getTime()),
         };
 
+
+        //Temp
         this.currentActiveAudio = null;
 
         soundEffectsInstance.push(this);
@@ -59,15 +61,20 @@ export class sound_effects {
         this.applyVolume(loadSoundSettings());
     }
 
+    // combines master volume to sfx specific volume
     applyVolume(settings) {
         const sfxVolume = Math.max(0, Math.min(1, settings.master * settings.sfx));
         Object.values(this.tracks).forEach(track => {
             track.volume = sfxVolume;
             track.muted = sfxVolume === 0;
         });
+
+
     }
 
     play(name, loop = false) {
+        console.log("playing ", name);
+
         const sound = this.tracks[name];
 
         if (!sound) {
@@ -81,6 +88,13 @@ export class sound_effects {
     }
 
     playTrivia(name, loop) {
+        if (loop === false) {
+            console.log("playing ", name);
+        }
+        else {
+            console.log("looping ", name);
+        }
+
         const sound = this.sirenTracks[name];
         if (!sound) {
             console.error(`Sound "${name}" not found.`);
@@ -107,6 +121,8 @@ export class sound_effects {
             activeSirenAudio = null;
         }
     }
+
+
 
     stop(name) {
         const sound = this.tracks[name];
@@ -143,4 +159,5 @@ export class sound_effects {
             soundEffectsInstance.splice(index, 1);
         }
     }
+
 }

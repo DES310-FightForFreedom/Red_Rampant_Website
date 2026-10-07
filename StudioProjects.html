@@ -107,13 +107,10 @@
                         <p>This standalone project let the team channel our chaotic side into an ice-breaker team-building party game that we aim to publish as a mobile app.</p>
                     </div>
                     <p>
-                      <a id="play-iframe" class="play-button" href="#">PLAY</a>
-                      <!-- Backup local file URL if the app lives outside this site. Update as needed. -->
-                      <a class="play-button secondary" href="file:///C:/Users/jakem/OneDrive/Documents/GitHub/Clockpocalypse-App/index.html" target="_blank" rel="noopener">OPEN (local)</a>
+                      <a class="play-button" href="./clockpocalypse/" target="_blank" rel="noopener">PLAY</a>
                     </p>
                 </div>
             </div>
-            <!-- iframe removed; PLAY now opens the full Clockpocalypse page -->
         </section>
 
         <section id="hook-line-and-cyber" class="project strip">
@@ -161,21 +158,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
-        <script>
-        // Open the Clockpocalypse page in a new tab when PLAY is clicked
-        document.addEventListener('DOMContentLoaded', function(){
-            const play = document.getElementById('play-iframe');
-            play?.addEventListener('click', function(e){
-                e.preventDefault();
-                // Open the full Clockpocalypse page on the site in a new tab
-                const src = 'clockpocalypse/index.html';
-                try{
-                    const w = window.open(src, '_blank', 'noopener');
-                    if(!w) window.location.href = src;
-                }catch(err){ window.location.href = src; }
-            });
-        });
-        </script>
 </body>
 
 </html>

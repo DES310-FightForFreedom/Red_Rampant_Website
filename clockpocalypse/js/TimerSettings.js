@@ -2,7 +2,7 @@ export class TimerSettings{
 
     constructor (time, sound, tickEffect){
         this.time=time;
-        this.sound=sound; 
+        this.sound=sound;
         this.tickEffect=tickEffect;
         this.callback = null;
         this.toEnd = null;
@@ -13,12 +13,12 @@ export class TimerSettings{
         this.callback = callback;
         this.toEnd= toEnd;
 
-        this.stop(); 
+        this.stop();
 
         this.interval=setInterval(()=>{
 
             this.time--;
-            
+
 
             if(this.sound && this.sound.tick){
                 this.sound.tick();
@@ -32,16 +32,16 @@ export class TimerSettings{
                 this.tickEffect(this.time);
             }
 
-        
+
             if(this.time <=0){
-                
+
                 this.time = 0;
 
                 clearInterval(this.interval);
 
                 callback(this.time);
-            
-                //calls end at 0 seconds 
+
+                //calls end at 0 seconds
                 toEnd();
 
                 return;
