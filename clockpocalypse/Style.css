@@ -33,6 +33,7 @@
      color: var(--text-primary);
      text-align: center;
      height: 100dvh;
+     min-height: 100dvh;
      overflow-y: auto;
      -webkit-overflow-scrolling: touch;
  }
@@ -41,13 +42,13 @@
      font-family: var(--font-label);
      letter-spacing: 0.5px;
      text-transform: uppercase;
-     font-size: 13px;
+     font-size: clamp(13px, 1.2vw, 22px);
      background: var(--accent-red);
      color: var(--text-primary);
      border: none;
      border-radius: 8px;
-     padding: 10px 18px;
-     margin: 8px;
+     padding: clamp(10px, 1vw, 20px) clamp(18px, 1.8vw, 32px);
+     margin: clamp(8px, 0.8vw, 14px);
      cursor: pointer;
      transition: transform .15s ease, filter .15s ease;
  }
@@ -81,8 +82,8 @@
 
  @media (max-width: 480px) {
      #app button {
-         font-size: 12px;
-         padding: 8px 14px;
+         font-size: clamp(12px, 3.4vw, 16px);
+         padding: clamp(8px, 2vw, 12px) clamp(14px, 3.6vw, 20px);
      }
 
      #in-game-settings {
@@ -100,13 +101,37 @@
  }
 
  .menu-screen {
-     margin-top: 10vh;
+     box-sizing: border-box;
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: clamp(18px, 4vh, 48px) 16px;
  }
 
  #header-text {
-     font-size: 40px;
+     font-size: clamp(40px, 4vw, 72px);
+     line-height: 1.1;
+     margin: 0 0 clamp(16px, 3vh, 32px);
      text-shadow: 0 0 1px rgba(195, 22, 22, 0.576), 0 0 4px rgba(232, 12, 12, 0.803);
 
+ }
+
+ @media (max-width: 480px) {
+     #app .tier-folder {
+         width: clamp(44px, 14vw, 56px);
+         height: clamp(28px, 8vw, 32px);
+     }
+
+     .difficulty-screen #folder-contents .flag-name {
+         font-size: clamp(10px, 3vw, 12px);
+         line-height: 1.15;
+         padding: 3px 4px;
+         overflow-wrap: anywhere;
+         word-break: normal;
+         min-height: 34px;
+     }
  }
 
  .menu-buttons {
@@ -117,7 +142,13 @@
  }
 
  .settings-screen {
-     margin-top: 10vh;
+     box-sizing: border-box;
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: clamp(18px, 4vh, 48px) 16px;
  }
 
  .settings-list {
@@ -165,10 +196,9 @@ Tutorial section
 */
 
  .tutorial-screen {
-     margin: 2vh 5px;
+     margin: 0 auto;
      padding: 0 20px 24px;
-
-     width: 100%;
+     width: min(100%, 1500px);
      box-sizing: border-box;
  }
 
@@ -811,17 +841,19 @@ Tutorial section
      }
 
      .flag-name {
-         font-size: 12px;
+         font-size: clamp(10px, 3vw, 12px);
          padding: 3px 4px;
-         overflow-wrap: normal;
-         word-break: keep-all;
+         overflow-wrap: anywhere;
+         word-break: normal;
          white-space: normal;
+         text-wrap: balance;
          box-sizing: border-box;
          min-height: 34px;
+         line-height: 1.15;
      }
 
      #folder-contents {
-         grid-template-columns: repeat(3, 1fr);
+         grid-template-columns: repeat(3, minmax(0, 1fr));
          gap: 12px 8px;
          min-height: 0;
          max-height: calc(100dvh - 220px);
@@ -838,17 +870,12 @@ Tutorial section
      }
 
      .tier-folder {
-         width: 56px;
-         height: 32px;
-     }
-
-     .settings-screen,
-     .menu-screen {
-         margin-top: 2vh;
+         width: clamp(44px, 14vw, 56px);
+         height: clamp(28px, 8vw, 32px);
      }
 
     .scenario-grid {
-        gap: 26px 12px;
+        gap: clamp(12px, 4vw, 24px);
     }
 
     .scenario-tile .tier-badges {
@@ -901,11 +928,20 @@ Tutorial section
 
  #scenario-folders {
      display: flex;
+     flex-wrap: wrap;
      gap: 2px;
      justify-content: center;
      padding: 0 8px;
      position: relative;
      margin-bottom: 6px;
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ #flags {
+     width: min(100%, 700px);
+     margin: 0 auto;
+     box-sizing: border-box;
  }
 
 
@@ -963,20 +999,41 @@ Completed CheckMark styling end
 Styling for Triangles checking off difficulty completed on
 ================================================================== */
 
+ .scenario-screen,
+ .difficulty-screen {
+     box-sizing: border-box;
+     width: 100%;
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: clamp(16px, 4vh, 48px) 16px;
+ }
+
+ .scenario-screen #header-text,
+ .difficulty-screen #header-text {
+     box-sizing: border-box;
+     width: 100%;
+     max-width: 100%;
+     font-size: clamp(28px, 4.5vw, 64px);
+     overflow-wrap: anywhere;
+ }
+
  .scenario-grid {
      display: grid;
-     grid-template-columns: repeat(2, clamp(90px, 22vw, 120px));
-     gap: 12px 10px;
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+     gap: clamp(12px, 2vw, 32px);
      justify-content: center;
-     margin: 20px auto;
-     max-width: 700px;
-     padding: 0 12px;
+     margin: clamp(16px, 3vh, 36px) auto;
+     width: min(100%, 1440px);
+     padding: 0;
  }
 
 
- @media (min-width: 600px) {
+ @media (min-width: 768px) {
      .scenario-grid {
-         grid-template-columns: repeat(4, clamp(90px, 22vw, 120px));
+         grid-template-columns: repeat(4, minmax(0, 1fr));
      }
  }
 
@@ -985,22 +1042,35 @@ Styling for Triangles checking off difficulty completed on
  .scenario-tile {
      position: relative;
      width: 100%;
-     max-width: 120px;
+     min-width: 0;
  }
 
- .scenario-tile .scenario-select {
+ #app .scenario-tile .scenario-select {
      width: 100%;
-     aspect-ratio: 2/1.25;
+     aspect-ratio: 2/1;
 
      box-sizing: border-box;
+     margin: 0;
      display: flex;
      align-items: center;
      justify-content: center;
      text-align: center;
      white-space: normal;
+     text-wrap: balance;
      line-height: 1.1;
      overflow: hidden;
-     font-size: clamp(10px, 2.8vw, 13px);
+     overflow-wrap: anywhere;
+     font-size: clamp(14px, 1.8vw, 28px);
+ }
+
+ @media (max-width: 480px) {
+     #app .scenario-tile .scenario-select {
+         aspect-ratio: 2 / 1;
+         min-height: 60px;
+         padding: clamp(8px, 2vw, 12px) clamp(8px, 2.5vw, 14px);
+         font-size: clamp(11px, 3.4vw, 15px);
+         line-height: 1.15;
+     }
  }
 
 

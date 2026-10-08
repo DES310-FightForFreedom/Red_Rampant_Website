@@ -74,7 +74,7 @@ export function showMenu() {
     bunkerTransition(() => {
         app.innerHTML = `
 
-        <div class="menu-screen">
+        <div class="menu-screen game-menu-screen">
             <h1 id="header-text">Clockpocalypse</h1>
 
             <div class="menu-buttons">
@@ -243,7 +243,7 @@ export function showScenario() {
         }
 
         app.innerHTML = `
-        <div>
+        <div class="scenario-screen">
             <h1 id="header-text">Select Clockpocalypse</h1>
 
             <div class= "scenario-grid">${scenarioHTML}</div>
@@ -285,7 +285,7 @@ export function showDifficulty(scenarioKey) {
         openTier = "easy";
 
         app.innerHTML = `
-        <div>
+        <div class="difficulty-screen">
             <h1 id="header-text">Select Difficulty</h1>
 
             <div id="flags"></div>
